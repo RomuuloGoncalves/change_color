@@ -1,0 +1,132 @@
+* {
+	margin: 0px;
+	padding: 0%;
+	font-family: sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header,
+footer {
+	padding: 0.4em 0.5em;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+p {
+	margin: 0 auto;
+}
+
+header {
+	justify-content: space-between;
+}
+
+.marcaLinks {
+	display: flex;
+	justify-content: space-between;
+	gap: 18px;
+}
+
+main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15%;
+}
+
+.marca {
+	font-size: 30px;
+}
+
+.marcaLinks li {
+	font-size: 20px;
+}
+
+.preView {
+	height: 100px;
+	width: 100%;
+	background-color: antiquewhite;
+	border: 1px solid black;
+}
+
+input {
+	margin-top: 5px;
+	border: black 1px solid;
+}
+
+.containerInput {
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.inform {
+	flex: 1 0 170px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* Button */
+button {
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #17c3b2;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	transition: 0.3s;
+	z-index: 1;
+	font-family: inherit;
+	color: #17c3b2;
+}
+
+button::before {
+	content: "";
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: #17c3b2;
+	transition: 0.5s ease;
+	display: block;
+	z-index: -1;
+}
+
+button:hover::before {
+	width: 105%;
+}
+
+button:hover {
+	color: #111;
+}
+
+@media (max-width: 800px) {
+	.marcaLinks {
+		display: none;
+	}
+	header {
+		justify-content: center;
+		align-items: center;
+	}
+}
